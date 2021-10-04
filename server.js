@@ -22,7 +22,7 @@ const URL = require("./models/Urls");
 
 const PORT = process.env.PORT || 3000;
 
-const whiteList = "https://urlshorteneryt.netlify.app/";
+const whiteList = "https://urlshorteneryt.netlify.app";
 
 app = express();
 app.use(
