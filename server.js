@@ -22,8 +22,14 @@ const URL = require("./models/Urls");
 
 const PORT = process.env.PORT || 3000;
 
+const whiteList = "https://urlshorteneryt.netlify.app/";
+
 app = express();
-app.use(cors()); // origin: * --> origin: mywebsite.com
+app.use(
+  cors({
+    origin: whiteList,
+  })
+); // origin: * --> origin: mywebsite.com
 app.use(express.json());
 
 app.get("/", (req, res) => {
